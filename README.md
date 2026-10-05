@@ -1,106 +1,85 @@
 # Eucalyn Cost-Performance Layout (Eucalyn配列コスパモデル)
 
-**English:** A Japanese romaji–oriented logical keyboard layout derived from [Eucalyn](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout). It keeps more QWERTY key positions than the base Eucalyn layout (about 42% letter match) while still improving home-row usage for Japanese typing. Includes a browser-based trainer (`index.html`) and layout JSON for tooling.
+A logical keyboard layout for typing Japanese in romaji, built on top of the [Eucalyn layout](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout).
+It keeps **12 of 26 letters (46%) in their QWERTY positions**, so most of your existing shortcuts and muscle memory survive, while still moving vowels and common consonants onto the home row.
 
-**日本語:** Eucalyn 配列をベースに、移行コストとショートカットの使いやすさを重視した論理配列です。詳しい背景は [note 記事](https://note.com/hyu_nisworks/n/n98e034b02379) を参照してください。
+Eucalyn 配列をベースにした、ローマ字入力向けの論理配列です。移行コストとショートカットの使いやすさを優先し、アルファベット 26 キーのうち 12 キー（約 46%）を QWERTY と同じ位置に残しています。
 
-- **Web 版（練習サイト）:** https://eucalyn-cust-performance-mudel.netlify.app/
+![Layout](layout.svg)
 
-## 配列図（アルファベット段）
-
-QWERTY 配列のキー位置（物理位置）に対して、次の文字が割り当てられます。
 
 ```
-段1: q w e , . f d r y p
-段2: a i u o - g t k s n
-段3: z x c v b m h j l /
+q w e , . f d r y p
+a i u o - g t k s n
+z x c v b m h j l /
 ```
 
-ホームポジション（段2）: `a i u o -` / `g t k s n`
+Home row: `a i u o -` / `g t k s n`
 
-## 特徴
+## Try it / 練習する
 
-- **左手に母音を集約:** 左手中指に `u` と `e` を置き、5 母音を横一列に並べない凸型に調整しています（`a` / `i` / `u` / `o` は Eucalyn と同系の配置感）。
-- **Neovim / Vim の HJKL:** 右下の逆 T 字（`h` `j` `k` `l`）は Eucalyn と同じ考え方を維持。
-- **QWERTY との一致を増やす:** アルファベット 26 キーのうち 11 キーが QWERTY と同位置（約 42%）。`q` `w` や保存・終了で使う `w` `q` など、ショートカットで触るキーを残しやすくしています。
-- **効率は控えめ:** 最高効率より、移行後の違和感とショートカット互換を優先した「コスパ」設計です。
+A browser-based typing trainer is published separately (desktop only, Windows / Mac). Turn your Japanese IME off and type in plain alphabet mode. Progress stays in your browser.
 
-## ほかの Eucalyn 系との違い（概要）
+- **Web trainer:** https://eucalyn-cust-performance-mudel.netlify.app/
 
-| 観点 | Eucalyn（原版） | Eucalyn改配列 | **コスパモデル（本リポ）** |
-| --- | --- | --- | --- |
-| 目的 | Vim 配慮 + バランス | 原版より効率を押し上げ | 移行コストとショートカット互換 |
-| QWERTY 一致（目安） | 約 34%（9/26） | 原版から再配置 | **約 42%（11/26）** |
-| 母音（左手） | 5 母音が横並び | 改版方針に沿った配置 | 凸型（`u`/`e` を中指など） |
-| 右上 `d`/`r` | 配置が逆 | 改版固有 | **`r` を中指側に**（打鍵頻度を考慮） |
+別途公開している練習サイトです（PC 専用）。日本語入力は OFF にして使ってください。入力履歴はブラウザ内にだけ保存されます。
 
-配列の比較用に、同梱の 30 文字スロット定義では次のように読み替わります（QWERTY スロット名 → 本配列の文字）:
+## Features / 特徴
 
-- Eucalyn 原版から主な変更: 段1の `,` 位置 → `e`、`.` → `,`、`m`/`r`/`d` → `f`/`d`/`r` など
-- 詳細は `layout/eucalyn-cospa-typing.json` を参照
+- **Vowels on the left hand.** `a` `i` `u` `o` stay on the left; `u` and `e` sit on the middle finger, so the five vowels do not form a flat row.
+- **Vim keys kept.** `h` `j` `k` `l` form an inverted T at the bottom right, and `w` / `q` (save / quit) stay where they are.
+- **12 keys match QWERTY.** `q w e p a k z x c v b /` are unchanged, which keeps shortcuts such as Ctrl+A.
+- **Moderate efficiency by design.** The goal is a layout that is cheap to move to, not the highest possible score.
 
-## 導入方法
+## Install / 導入
 
-論理配列は OS やキー remapper で「押したキー → 出力文字」を設定します。手順は環境ごとに異なるため、ここでは方針のみ記載します。
+A logical layout is set up with a key remapper or your OS. Your keyboard's physical keys do not change. Switching back to QWERTY is just disabling the remap.
 
-1. **まず Web 版で練習する**（日本語 IME は OFF、英字入力で練習）
-2. **配列定義を参照して remapper を設定する**
-   - 30 文字スロット形式: [`layout/eucalyn-cospa-typing.json`](layout/eucalyn-cospa-typing.json)
-   - Keybr 互換のフルキー定義: [`layout/eucalyn-cospa-keybr.json`](layout/eucalyn-cospa-keybr.json)
-3. **macOS:** [Karabiner-Elements](https://karabiner-elements.pqrs.org/) などで simple modifications を設定
-4. **Windows:** [PowerToys Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager) や AutoHotkey など
+### macOS (Karabiner-Elements)
 
-QWERTY に戻せば、従来どおり QWERTY で入力できます（両方の配列を使い分ける利用者もいます）。
+1. Install [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
+2. Add the entries from [`integrations/karabiner/simple_modifications.json`](integrations/karabiner/simple_modifications.json) to the `simple_modifications` section of your Karabiner profile (`~/.config/karabiner/karabiner.json`).
 
-## Eucalyn Trainer（同梱）
+### Windows
 
-このリポジトリの `index.html` は、コスパモデルへ移行するための **パソコン専用** タイピング練習サイトです（単体 HTML、ビルド不要）。
+[PowerToys Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager) can remap single keys. Use the mapping table below. A ready-made script is not included yet.
 
-### 使い方
+### Keybr / other tools
 
-1. 日本語入力を OFF にする。
-2. 必要なら右上で Windows／Mac 表示を選ぶ。
-3. スペースキーで選択中の課題を始めるか、「今日の5分」を選ぶ。
-4. 「進捗」で弱点、自己ベスト、次の小目標を確認する。
+- Keybr-compatible full key definition: [`layout/eucalyn-cospa-keybr.json`](layout/eucalyn-cospa-keybr.json)
+- 30-slot definition (letters, shift, finger, home flag): [`layout/eucalyn-cospa-typing.json`](layout/eucalyn-cospa-typing.json)
 
-コースは手動でも選べます。おすすめ段階は、入力履歴に応じて「キー探索 → 短いワード → 例文 → 実務練習」と進みます。
+### Mapping table / 対応表
 
-### 最低限の実務入力の目安
+Press the QWERTY key on the left, get the letter on the right. Keys not listed are unchanged.
 
-- 15 WPM 以上
-- 正確率 95% 以上
-- 上記を例文・実務練習の 5 分セッションで 3 回記録
+| QWERTY | → | Output | QWERTY | → | Output |
+| --- | --- | --- | --- | --- | --- |
+| `r` | → | `,` | `h` | → | `g` |
+| `t` | → | `.` | `j` | → | `t` |
+| `y` | → | `f` | `l` | → | `s` |
+| `u` | → | `d` | `;` | → | `n` |
+| `i` | → | `r` | `n` | → | `m` |
+| `o` | → | `y` | `m` | → | `h` |
+| `s` | → | `i` | `,` | → | `j` |
+| `d` | → | `u` | `.` | → | `l` |
+| `f` | → | `o` | `-` | → | `;` |
+| `g` | → | `-` |  |  |  |
 
-合否ではなく、実務文へ進むための目安です。
+## Design notes / 設計メモ
 
-### 進捗データ
+1. **Minimal migration cost:** keep as many QWERTY positions as possible.
+2. **Vim compatibility:** `h` `j` `k` `l` for cursor movement, `w` and `q` stay put.
+3. **Balanced efficiency:** within the two constraints above, concentrate typing on the home row, avoid same-finger repeats and spread load across fingers.
 
-入力履歴とセッション結果はブラウザ内に保存します。「進捗」から JSON でバックアップ・復元・全削除ができます。サーバーへは送信しません。
+The Eucalyn layout is the starting point. Compared with it, `d` and `r` are swapped, `r` is moved to the middle finger, and `e` is moved up to form the vowel "convex" shape. Background and reasoning (Japanese): [note article](https://note.com/hyu_nisworks/n/n98e034b02379).
 
-### 対応環境
+背景と詳しい設計意図は [note 記事](https://note.com/hyu_nisworks/n/n98e034b02379) を参照してください。
 
-- パソコン専用（画面幅 1024px 以上）
-- Windows／Mac
-- Chromium 系ブラウザで検証済み
+## Credits / 引用・紹介
 
-### ローカルで開く
-
-```bash
-python -m http.server 4173 --bind 127.0.0.1
-```
-
-- 練習: http://127.0.0.1:4173/
-- 自動テスト: http://127.0.0.1:4173/tests/test-runner.html
-
-## テスト
-
-[`tests/test-runner.html`](tests/test-runner.html) が `index.html` を iframe で読み込み、UI とキー入力を検証します。手順は [`tests/README.md`](tests/README.md)、過去の実行記録は [`tests/TEST_RESULTS.md`](tests/TEST_RESULTS.md) を参照してください。
-
-## 引用・紹介
+- Based on the [Eucalyn layout](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout) (ゆかりメモ).
+- If you introduce this layout, please link to the [note article](https://note.com/hyu_nisworks/n/n98e034b02379) (at the layout author's request).
+- Efficiency was measured with [Keyboard Layout Analyzer](https://patorjk.com/keyboard-layout-analyzer/).
 
 配列を紹介する場合は、[note 記事](https://note.com/hyu_nisworks/n/n98e034b02379) へのリンクを付けてください（配列作者の希望に基づく）。
-
-## 関連リンク
-
-- [Eucalyn 配列（ゆかりメモ）](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout)
-- [Eucalyn 改配列（biacco42）](https://biacco42.hatenablog.com/entry/2018/12/16/235959)
