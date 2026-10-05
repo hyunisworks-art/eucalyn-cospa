@@ -78,3 +78,9 @@ The Eucalyn layout is the starting point. Compared with it, `d` and `r` are swap
 - Efficiency was measured with [Keyboard Layout Analyzer](https://patorjk.com/keyboard-layout-analyzer/).
 
 配列を紹介する場合は、[note 記事](https://note.com/hyu_nisworks/n/n98e034b02379) へのリンクを付けてください（配列作者の希望に基づく）。
+
+## License / ライセンス
+
+[CC BY 4.0](LICENSE.md). Free to use and modify; please credit `hyu_nisworks` with a link to the note article or this repository.
+
+自由に使用・改変できます。作者名 `hyu_nisworks` と、note 記事かこのリポジトリへのリンクを掲載してください。
