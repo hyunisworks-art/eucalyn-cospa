@@ -5,7 +5,6 @@
 **日本語:** Eucalyn 配列をベースに、移行コストとショートカットの使いやすさを重視した論理配列です。詳しい背景は [note 記事](https://note.com/hyu_nisworks/n/n98e034b02379) を参照してください。
 
 - **Web 版（練習サイト）:** https://eucalyn-cust-performance-mudel.netlify.app/
-- **ライセンス:** 未定（オーナー確認待ち）
 
 ## 配列図（アルファベット段）
 
