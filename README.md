@@ -74,6 +74,8 @@ The Eucalyn layout is the starting point. Compared with it, `d` and `r` are swap
 ## Credits / 引用・紹介
 
 - Based on the [Eucalyn layout](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout) (ゆかりメモ).
+- This is an unofficial derivative and is not affiliated with the author of the Eucalyn layout.
+  本配列は非公式の派生で、Eucalyn 配列の作者とは関係ありません。
 - If you introduce this layout, please link to the [note article](https://note.com/hyu_nisworks/n/n98e034b02379) (at the layout author's request).
 - Efficiency was measured with [Keyboard Layout Analyzer](https://patorjk.com/keyboard-layout-analyzer/).
 
