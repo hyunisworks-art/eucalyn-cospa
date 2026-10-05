@@ -1,28 +1,3 @@
-# License
-
-Eucalyn Cost-Performance Layout (Eucalyn配列コスパモデル)
-Copyright (c) hyu_nisworks
-
-This work is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-You may use, modify and redistribute it, including commercially, as long as you give credit.
-
-## How to give credit / 表示の方法
-
-When you use, modify or introduce this layout, include a link to **either** of the following with the author name `hyu_nisworks`:
-
-- note: https://note.com/hyu_nisworks/n/n98e034b02379
-- GitHub: https://github.com/hyunisworks-art/eucalyn-cospa
-
-利用・改変・紹介する場合は、作者名 `hyu_nisworks` と、上の note か GitHub のどちらかへのリンクを掲載してください。
-
-## Scope / 対象範囲
-
-This license applies to the files in this repository. The [Eucalyn layout](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout) this layout is based on belongs to its own author and is not covered by this license.
-
-ベースにした Eucalyn 配列の権利は、その作者に帰属します。このライセンスの対象外です。
-
----
-
 Attribution 4.0 International
 
 =======================================================================

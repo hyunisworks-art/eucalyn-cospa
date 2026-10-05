@@ -81,6 +81,10 @@ The Eucalyn layout is the starting point. Compared with it, `d` and `r` are swap
 
 ## License / ライセンス
 
-[CC BY 4.0](LICENSE.md). Free to use and modify; please credit `hyu_nisworks` with a link to the note article or this repository.
+[CC BY 4.0](LICENSE.md). You may use, modify and redistribute this layout, including commercially, as long as you give credit.
 
-自由に使用・改変できます。作者名 `hyu_nisworks` と、note 記事かこのリポジトリへのリンクを掲載してください。
+**How to credit:** include the author name `hyu_nisworks` and a link to **either** the [note article](https://note.com/hyu_nisworks/n/n98e034b02379) or this repository (https://github.com/hyunisworks-art/eucalyn-cospa).
+
+The [Eucalyn layout](https://eucalyn.hatenadiary.jp/entry/about-eucalyn-layout) this layout is based on belongs to its own author and is not covered by this license.
+
+自由に使用・改変・再配布できます（商用利用も可）。その際は、作者名 `hyu_nisworks` と、[note 記事](https://note.com/hyu_nisworks/n/n98e034b02379) かこのリポジトリのどちらかへのリンクを掲載してください。ベースにした Eucalyn 配列の権利は、その作者に帰属し、このライセンスの対象外です。
