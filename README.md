@@ -44,11 +44,6 @@ A logical layout is set up with a key remapper or your OS. Your keyboard's physi
 
 [PowerToys Keyboard Manager](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager) can remap single keys. Use the mapping table below. A ready-made script is not included yet.
 
-### Keybr / other tools
-
-- Keybr-compatible full key definition: [`layout/eucalyn-cospa-keybr.json`](layout/eucalyn-cospa-keybr.json)
-- 30-slot definition (letters, shift, finger, home flag): [`layout/eucalyn-cospa-typing.json`](layout/eucalyn-cospa-typing.json)
-
 ### Mapping table / 対応表
 
 Press the QWERTY key on the left, get the letter on the right. Keys not listed are unchanged.
